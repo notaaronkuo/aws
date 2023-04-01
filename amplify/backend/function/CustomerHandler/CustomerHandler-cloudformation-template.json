@@ -47,12 +47,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "UserRegistration",
+            "CustomerHandler",
             {
               "Fn::Join": [
                 "",
                 [
-                  "UserRegistration",
+                  "CustomerHandler",
                   "-",
                   {
                     "Ref": "env"
@@ -89,12 +89,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "temp3LambdaRole4ae6d94d",
+            "temp3LambdaRoleaa3e6b50",
             {
               "Fn::Join": [
                 "",
                 [
-                  "temp3LambdaRole4ae6d94d",
+                  "temp3LambdaRoleaa3e6b50",
                   "-",
                   {
                     "Ref": "env"

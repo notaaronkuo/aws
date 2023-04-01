@@ -14,6 +14,20 @@
     "categories": {
       "auth": {
         "temp3": {}
+      },
+      "function": {
+        "UserRegistration": {
+          "deploymentBucketName": "amplify-amplify56f3ee3b61ef4-staging-12700-deployment",
+          "s3Key": "amplify-builds/UserRegistration-782f37466d61756d3159-build.zip"
+        },
+        "CustomerHandler": {
+          "deploymentBucketName": "amplify-amplify56f3ee3b61ef4-staging-12700-deployment",
+          "s3Key": "amplify-builds/CustomerHandler-764b586479554533504c-build.zip"
+        }
+      },
+      "api": {
+        "temp3": {},
+        "api720d8ea9": {}
       }
     }
   }

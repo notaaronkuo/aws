@@ -1,5 +1,19 @@
 {
   "api": {
+    "api720d8ea9": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "CustomerHandler"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
     "temp3": {
       "dependsOn": [
         {
@@ -68,10 +82,49 @@
     }
   },
   "function": {
+    "CustomerHandler": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "UserRegistration": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_CustomerHandler_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CustomerHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_CustomerHandler_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CustomerHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_UserRegistration_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "UserRegistration"
+        }
+      ]
+    },
+    "AMPLIFY_function_UserRegistration_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "UserRegistration"
+        }
+      ]
     }
   }
 }
