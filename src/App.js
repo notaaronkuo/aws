@@ -2,8 +2,12 @@
 // import './App.css';
 import Amplify, { API } from 'aws-amplify'
 import React, { useEffect, useState } from 'react'
+import awsconfig from './aws-exports';
 
-const myAPI = "api93aa4b5e"
+Amplify.configure(awsconfig);
+API.configure(awsconfig);
+
+const myAPI = "api720d8ea9";
 const path = '/customers';
 
 const App = () => {
@@ -12,9 +16,12 @@ const App = () => {
 
     //Function to fetch from our backend and update customers array
     function getCustomer(e) {
-        let customerId = e.input
-        API.get(myAPI, path + "/" + customerId)
+        console.log("app.js line 15")
+        let customerId = e
+        console.log(e)
+        API.get(myAPI, "/customers/" + customerId, {})
             .then(response => {
+                console.log("app.js line 19")
                 console.log(response)
                 let newCustomers = [...customers]
                 newCustomers.push(response)
