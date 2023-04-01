@@ -152,6 +152,27 @@
         }
       }
     },
+    "apiapi720d8ea9": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplify56f3ee3b61ef4-staging-12700-deployment/amplify-cfn-templates/api/api720d8ea9-cloudformation-template.json",
+        "Parameters": {
+          "functionCustomerHandlerName": {
+            "Fn::GetAtt": [
+              "functionCustomerHandler",
+              "Outputs.Name"
+            ]
+          },
+          "functionCustomerHandlerArn": {
+            "Fn::GetAtt": [
+              "functionCustomerHandler",
+              "Outputs.Arn"
+            ]
+          },
+          "env": "staging"
+        }
+      }
+    },
     "apitemp3": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
@@ -174,27 +195,6 @@
           },
           "S3DeploymentBucket": "amplify-amplify56f3ee3b61ef4-staging-12700-deployment",
           "S3DeploymentRootKey": "amplify-appsync-files/00aaae1baecc0b0bbbf314552f72f2a166af0ffd",
-          "env": "staging"
-        }
-      }
-    },
-    "apiapi720d8ea9": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplify56f3ee3b61ef4-staging-12700-deployment/amplify-cfn-templates/api/api720d8ea9-cloudformation-template.json",
-        "Parameters": {
-          "functionCustomerHandlerName": {
-            "Fn::GetAtt": [
-              "functionCustomerHandler",
-              "Outputs.Name"
-            ]
-          },
-          "functionCustomerHandlerArn": {
-            "Fn::GetAtt": [
-              "functionCustomerHandler",
-              "Outputs.Arn"
-            ]
-          },
           "env": "staging"
         }
       }
@@ -256,6 +256,17 @@
         }
       }
     },
+    "functionCustomerHandler": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplify56f3ee3b61ef4-staging-12700-deployment/amplify-cfn-templates/function/CustomerHandler-cloudformation-template.json",
+        "Parameters": {
+          "deploymentBucketName": "amplify-amplify56f3ee3b61ef4-staging-12700-deployment",
+          "s3Key": "amplify-builds/CustomerHandler-51546e7149797175716d-build.zip",
+          "env": "staging"
+        }
+      }
+    },
     "functionUserRegistration": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
@@ -263,17 +274,6 @@
         "Parameters": {
           "deploymentBucketName": "amplify-amplify56f3ee3b61ef4-staging-12700-deployment",
           "s3Key": "amplify-builds/UserRegistration-782f37466d61756d3159-build.zip",
-          "env": "staging"
-        }
-      }
-    },
-    "functionCustomerHandler": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplify56f3ee3b61ef4-staging-12700-deployment/amplify-cfn-templates/function/CustomerHandler-cloudformation-template.json",
-        "Parameters": {
-          "deploymentBucketName": "amplify-amplify56f3ee3b61ef4-staging-12700-deployment",
-          "s3Key": "amplify-builds/CustomerHandler-764b586479554533504c-build.zip",
           "env": "staging"
         }
       }

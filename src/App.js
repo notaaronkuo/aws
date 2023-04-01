@@ -2,7 +2,7 @@
 // import './App.css';
 import Amplify, { API } from 'aws-amplify'
 import React, { useEffect, useState } from 'react'
-import awsconfig from './aws-exports';
+import awsconfig from '../Users/aaronkuo/Projects/aws/src/aws-exports.js';
 
 Amplify.configure(awsconfig);
 API.configure(awsconfig);

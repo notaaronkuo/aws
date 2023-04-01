@@ -22,7 +22,7 @@
         },
         "CustomerHandler": {
           "deploymentBucketName": "amplify-amplify56f3ee3b61ef4-staging-12700-deployment",
-          "s3Key": "amplify-builds/CustomerHandler-764b586479554533504c-build.zip"
+          "s3Key": "amplify-builds/CustomerHandler-51546e7149797175716d-build.zip"
         }
       },
       "api": {
